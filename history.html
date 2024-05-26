@@ -1,0 +1,498 @@
+<script>
+
+	
+	// document.addEventListener('visibilitychange',() => {
+	// 	if (document.visibilityState === 'hidden') {
+	// 		location.href  = 'logout';
+	// 	}
+	// });
+
+	
+	
+</script>
+
+
+
+<!doctype html>
+<html>
+<head>
+	
+	<meta name='viewport' content='width=device-width, initial-scale=1.0' data-rc='viewport'>
+	<link rel='stylesheet' href='assets/core/css/bootstrap.min.css' data-rc='bootstrap'>
+	<link rel='stylesheet' href='assets/core/vendor/bootstrap-icons/bootstrap-icons.css' data-rc='bs-icon'>
+	<link rel='stylesheet' href='assets/core/css/animate.min.css' data-rc='animate'>
+	<link rel='stylesheet' href='assets/core/vendor/glightbox/glightbox.min.css' data-rc='glightbox'>
+	<link rel='stylesheet' href='assets/core/vendor/toastr/toastr.min.css' data-rc='toastr'>
+	<link rel='stylesheet' href='assets/core/css/font-size.min.css' data-rc='font-size'>
+	<link rel='stylesheet' href='assets/core/css/main.css' data-rc='main-css'>
+	<link rel="stylesheet" href="assets/modules/uss-dashboard/ud-assets/css/default.css" />
+	<link rel='stylesheet' href='assets/modules/uss-mainstyle.css'>
+<link rel='stylesheet' href='assets/modules/uss-support/utils/style.css'/>
+<link rel="shortcut icon" type="image/x-icon" href="assets/alicon.png">
+<style>
+
+	#loading {
+		position: fixed;
+		width: 100%;
+		height: 100vh;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		background: red;
+		z-index: 2000;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.loader {
+		width: 100px;
+		aspect-ratio: 4;
+		background: radial-gradient(circle closest-side,white 90%,#0000) 0/calc(100%/3) 100% space;
+		clip-path: inset(0 100% 0 0);
+		animation: l1 1s steps(4) infinite;
+	}
+@keyframes l1 {to{clip-path: inset(0 -34% 0 0)}}
+
+.err {
+	border: 1px solid red !important;
+}
+
+.d-none {
+	display: none !important;
+}
+</style>
+</head>
+
+<body class="uss">
+
+<!-- pre loader area start -->
+   <div id="loading">
+	<div class="loader"></div>
+  </div>
+  <!-- pre loader area end -->
+  
+  
+<!-- ======== sidebar-nav start =========== -->
+
+<aside class="sidebar-nav-wrapper" style="background-color: red !important;">
+
+	<div class="navbar-logo">
+		<a href="index">
+			<img src="assets/allogo.png" height='50px' alt="logo" />
+		</a>
+	</div>
+	
+	<nav class="sidebar-nav text-capitalize">
+		<ul id='nav-group'>
+			
+				<li class="nav-item active" data-menu-level="0" style="border: none;">
+				
+					<a href="index" target="_self" style="color: white;">
+													<span class="icon"><i style="color: white;" class='bi bi-speedometer2'></i></span>
+												<span class="text">Dashboard</span>
+					</a>
+					
+										
+				</li>			
+								
+				
+				<li onClick="location.href='intl'" class="nav-item" data-menu-level="0" style="border: none;">
+				
+					<a href="intl" style="color: white;" class="collapsed" data-bs-toggle="collapse" data-bs-target="#menufy-transfer" aria-controls="menufy-transfer" aria-expanded="false">
+													<span class="icon"><i style="color: white;" class='bi bi-send'></i></span>
+												<span class="text">transfer</span>
+					</a>
+										
+				</li>
+
+				<li onClick="location.href='mobile'" class="nav-item" style="border: none;" data-menu-level="0">
+				
+					<a href="mobile" style="color: white;" class="collapsed" data-bs-toggle="collapse" data-bs-target="#menufy-transfer" aria-controls="menufy-transfer" aria-expanded="false">
+													<span class="icon"><i style="color: white;" class='bi bi-bank2'></i></span>
+												<span class="text">Mobile Deposit</span>
+					</a>
+										
+				</li>
+
+				<li onClick="location.href='monetarydeposit'" style="border: none;" class="nav-item" data-menu-level="0">
+				
+					<a href="monetarydeposit" style="color: white;" class="collapsed" data-bs-toggle="collapse" data-bs-target="#menufy-transfer" aria-controls="menufy-transfer" aria-expanded="false">
+													<span class="icon"><i style="color: white;" class='bi bi-bank2'></i></span>
+												<span class="text">digital deposit</span>
+					</a>
+										
+				</li>
+
+					
+				<li class="nav-item nav-item-has-children" data-menu-level="0" style="border: none;">
+				
+					<a href="javascript:void(0)" style="color: white;" class="collapsed" data-bs-toggle="collapse" data-bs-target="#menufy-loan" aria-controls="menufy-loan" aria-expanded="false">
+													<span class="icon"><i style="color: white;" class='bi bi-cash-coin'></i></span>
+												<span class="text">loan</span>
+					</a>
+					
+					<ul id='menufy-loan' class='collapse dropdown-nav ' data-bs-parent='#nav-group'>
+								
+						<li class="nav-sub-item" data-menu-level="1">
+						
+							<a href="loanapplication" style="color: white;" target="_self">
+														<span class="text">application</span>
+							</a>
+							
+												
+						</li>
+						
+										
+						
+						<li class="nav-sub-item" data-menu-level="1">
+						
+							<a href="loanstatus" target="_self" style="color: white;">
+														<span class="text">status</span>
+							</a>
+							
+												
+						</li>
+						
+										
+					</ul>
+										
+				</li>
+				
+								
+				
+				<li class="nav-item nav-item-has-children" data-menu-level="0" style="border: none;">
+				
+					<a href="javascript:void(0)" style="color: white;" class="collapsed" style="border: none;" data-bs-toggle="collapse" data-bs-target="#menufy-profile" aria-controls="menufy-profile" aria-expanded="false">
+													<span class="icon"><i style="color: white;" class='bi bi-person'></i></span>
+												<span class="text">Account</span>
+					</a>
+					
+					<ul id='menufy-profile' class='collapse dropdown-nav ' data-bs-parent='#nav-group'>
+								
+						<li class="nav-sub-item" data-menu-level="1">
+						
+							<a href="profile" style="color: white;" target="_self">
+														<span class="text">Profile</span>
+							</a>
+							
+												
+						</li>
+
+						<li class="nav-sub-item" data-menu-level="1">
+						
+							<a href="monetarycard" style="color: white;" target="_self">
+														<span class="text">card</span>
+							</a>
+							
+												
+						</li>
+										
+						
+						<li class="nav-sub-item" data-menu-level="1">
+						
+							<a href="statement" style="color: white;" target="_self">
+														<span class="text">statement</span>
+							</a>
+							
+												
+						</li>
+						
+						
+								
+					</ul>
+										
+				</li>
+				
+				
+				<li class="nav-item nav-item-has-children" style="border: none;" data-menu-level="0">
+				
+					<a href="javascript:void(0)" style="color: white;" class="collapsed" data-bs-toggle="collapse" data-bs-target="#menufy-security" aria-controls="menufy-security" aria-expanded="false">
+													<span class="icon"><i style="color: white;" class='bi bi-lock'></i></span>
+												<span class="text">Security</span>
+					</a>
+						
+					<ul id='menufy-security' class='collapse dropdown-nav ' data-bs-parent='#nav-group'>
+							
+						<li class="nav-sub-item" data-menu-level="1">
+						
+							<a href="password" style="color: white;" target="_self">
+														<span class="text">password</span>
+							</a>
+							
+												
+						</li>
+						
+										
+						
+						<li class="nav-sub-item" data-menu-level="1">
+						
+							<a href="pin" style="color: white;" target="_self">
+														<span class="text">pin</span>
+							</a>
+							
+												
+						</li>
+					
+									
+					</ul>
+										
+				</li>
+				
+								
+							
+		</ul>
+	</nav>
+	
+</aside>
+
+<div class="overlay">
+	<a href='javascript:void(0)' class='overlay-close'>	
+		<i class='bi bi-x-lg'></i>
+	</a>
+</div>
+
+<!-- ======== sidebar-nav end =========== -->
+<main class="main-wrapper " >
+	
+		
+	<!-- ========== [ HEADER ] ========== -->
+	
+	<header class="header " style="background: orangered;">
+	
+		<div class="container-fluid">
+			<div class="row align-items-center">
+			
+				<div class="col-md-6 col-6">
+					<div class="header-left d-flex align-items-center">
+												<div class="menu-toggle-btn mr-20 d-xl-none">
+							<button id="menu-toggle" class="btn btn-hover" style="color: white;font-size: 40px;">
+								<i class="bi bi-list" style=""></i>
+							</button>
+						</div>
+											</div>
+				</div>
+				
+				<div class="col-md-6 col-6">
+					<div class="header-right">
+					
+						<!-- notification start -->
+							<div class="notification-box ml-15" data-nxurl=''>
+			
+					
+			<div class='mobile d-sm-none'>
+				<a href='notifications'>
+								<button class="mobile-notice" type="button">
+				<i class="bi bi-bell"></i>
+									<span class='animate__animated animate__wobble animate__infinite' data-nx-count>
+						5					</span>
+							</button>
+						</a>
+			</div>
+			
+			<div class='widescreen d-none d-sm-flex'>
+			
+							<button class="dropdown-toggle" id="notification" data-bs-toggle="dropdown" aria-expanded="false" type="button">
+				<i class="bi bi-bell"></i>
+									<span class='animate__animated animate__wobble animate__infinite' data-nx-count>
+										8									
+										
+										<!-- if (mysqli_num_rows($sql) > 0) {
+											$notifications = mysqli_fetch_array($sql);	
+											if ($notifications[0] > 0) echo $notifications[0];
+											
+										} -->									
+
+										
+									</span>
+							</button>
+				
+				<ul class="dropdown-menu dropdown-menu-end" aria-labelledby="notification" data-nx-container='header'>
+
+                        <li>
+                            <a href='receipt' class='unviewed' data-nx='189'>
+                                <div class='image'>
+                                    <img src='./assets/imgs/focused-businessman-looking-papers.jpg' alt='' />
+                                </div>
+                                <div class='content'>
+                                    <p>Hi Jason,
+                                    Credit 500,000 USD.<br>
+                                    Acc: **4***57* <br>
+                                    Desc: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga nulla quidem, architecto vel expedita explicabo impedit molestiae exercitationem quia asperiores earum sapiente vitae omnis officiis soluta consequatur id totam blanditiis. &hellip;</p>
+                                    <span>12:30:01 2/4/2024</span>
+                                </div>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href='receipt' class='unviewed' data-nx='189'>
+                                <div class='image'>
+                                    <img src='./assets/imgs/focused-businessman-looking-papers.jpg' alt='' />
+                                </div>
+                                <div class='content'>
+                                    <p>Hi Jason,
+                                    Credit 500,000 USD.<br>
+                                    Acc: **4***57* <br>
+                                    Desc: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga nulla quidem, architecto vel expedita explicabo impedit molestiae exercitationem quia asperiores earum sapiente vitae omnis officiis soluta consequatur id totam blanditiis. &hellip;</p>
+                                    <span>12:30:01 2/4/2024</span>
+                                </div>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href='receipt' class='unviewed' data-nx='189'>
+                                <div class='image'>
+                                    <img style="width: 100% !important;" src='./assets/imgs/photo.jpg' alt='' />
+                                </div>
+                                <div class='content'>
+                                    <p>Hi Jason,
+                                    Credit 500,000 USD.<br>
+                                    Acc: **4***57* <br>
+                                    Desc: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga nulla quidem, architecto vel expedita explicabo impedit molestiae exercitationem quia asperiores earum sapiente vitae omnis officiis soluta consequatur id totam blanditiis. &hellip;</p>
+                                    <span>12:30:01 2/4/2024</span>
+                                </div>
+                            </a>
+                        </li>
+
+								<!-- while($rows=mysqli_fetch_assoc($sql)) {
+									$time = time_ago($rows['date']);
+									echo("
+									<li>
+									<a href='receipt' class='unviewed' data-nx='189'>
+										<div class='image'>
+											<img src='../".$user['photo']."' alt='' />
+										</div>
+										<div class='content'>
+											<p>Hi ".$user['firstname'].",
+											".$rows['type']." ".$rows['amount']." USD.<br>
+											Acc: **4***57* <br>
+											Desc: ".$rows['description']."&hellip;</p>
+											<span>".$time."</span>
+										</div>
+									</a>
+								</li>						
+								"); -->						
+									
+										
+						<li>
+							<a href="notifications" class='d-block text-center'>
+								<small> <i class='bi bi-bell me-1'></i> View all </small>
+							</a>
+						</li>
+				</ul>
+				
+			</div>
+		
+	</div>
+							
+						<!-- profile start -->
+						<div class="profile-box ml-1 ">
+						
+							<button class="dropdown-toggle bg-transparent border-0" type="button" id="profile" data-bs-toggle="dropdown" aria-expanded="false">
+								<div class="profile-info">
+									<div class="info">
+										<div class="image">
+											<img style="width: 100% !important;" src="./assets/imgs/photo.jpg" alt=""/>
+											<span class="status"></span>
+										</div>
+									</div>
+								</div>
+								<i class="bi bi-chevron-down"></i>
+							</button>
+							
+							<ul class="dropdown-menu dropdown-menu-end" aria-labelledby="profile">
+																<li>
+									<div class='px-3 py-2 text-end bg-light rounded-2 fs-14px'>
+										<span class='text-success'>usertest</span>
+										<i class='bi bi-info-circle ms-1'></i>
+									</div>
+								</li>
+																	<li data-auth='logout'>
+										<a href="logout"> 
+											<i class="bi bi-power"></i> Sign Out 
+										</a>
+									</li>
+															</ul>
+							
+						</div>
+						<!-- profile end -->
+						
+					</div>
+				</div>
+				
+			</div>
+		</div>
+		
+	</header>
+	
+	<!-- === [ content-wrapper ] === -->
+	
+	<div class='content-wrapper '>
+		
+		<div class='container-fluid'>
+
+			<h4 class='mb-3'>Transaction History</h4>
+
+			<div class="dt-container" data-domtablet="transfers">
+			<div class="row row-cols-auto dt-widgets"></div>
+						<!-- a good spot add features like search box, checkbox options etc -->
+						<div class="domtable-wrapper"><div class="card"><div class="card-body"><div class="table-responsive">
+							<table class="table" id="dt-transfers">
+								<thead>
+									<tr>
+										<th>Description</th>
+										<th>amount</th>
+										<th>type</th>
+										<th>date</th>
+										<th>receipt</th>
+									</tr>
+								</thead>
+								<tbody>
+									<?php
+
+										$history = array();
+										$sql = mysqli_query($db,"SELECT * FROM `transactionhistory` WHERE `user-token`='$tkn'");
+										if (mysqli_num_rows($sql) > 0) {
+											while($rows=mysqli_fetch_assoc($sql)) {
+												echo("
+												<tr>
+													<td>".$rows['description']."</td>
+													<td><span class='text-danger'>".$rows['amount']."</span></td>
+													<td><span class='badge bg-danger'>debit</span></td>
+													<td><small>".$rows['date']."</small></td>
+													<td>
+														<a href='receipt' target='blank' class='btn btn-sm btn-outline-primary'>
+															Receipt
+														</a>
+													</td>
+												</tr>
+											");
+											}	
+											
+										}
+									
+									?>
+									
+
+
+									</tbody>
+								
+							</table>
+						</div></div></div></div>
+						<!-- a good spot to add features like nav button, footer label etc -->
+					<div class="mt-3 dt-paginate">
+					
+				</div>
+		</div>
+		</div>	
+    
+    
+
+	</div>
+	 <!-- === [ //content-wrapper ] === -->
+	
+		
+</main>
+<?php
+    require 'footer.php';
+?>

@@ -1,0 +1,52 @@
+button.btn-text {
+    text-decoration: none;
+    color: rgba(var(--bs-link-color-rgb),var(--bs-link-opacity,1));
+    border: none;
+    background-color: transparent;
+}
+
+button.btn-text:hover {
+    color: #4a6cf7;
+}
+
+button.btn-text:focus {
+    text-decoration: none;
+    outline: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+}
+
+.nice-select::after {
+    content: '';
+}
+
+input[type=text], 
+input[type=email], 
+input[type=tel], 
+input[type=number], 
+input[type=password], 
+input[type=url], 
+textarea {
+    font-size: 1rem;
+    height: auto;
+    line-height: 1.5;
+    padding: .375rem .75rem;
+}
+
+.nice-select.open .list {
+    max-height: 50vh;
+    overflow: auto;
+}
+
+.nice-select .option:hover {
+    background-color: var(--bs-gray-200);
+}
+
+[data-beneficiary] {
+    cursor: pointer;
+}
+
+[data-beneficiary]:hover {
+    background-color: var(--bs-light);
+}

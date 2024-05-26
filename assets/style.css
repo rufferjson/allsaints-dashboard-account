@@ -1,0 +1,40 @@
+
+
+
+.bg-deep {
+    background: orangered !important;
+}
+
+
+.bg-light {
+    background: orangered !important;
+}
+
+
+.bg-simple {
+    background: orangered !important;
+}
+
+.cl-deep {
+    color: #8B0000 !important;
+}
+
+.cl-light {
+    color: #ea2f2f !important;
+}
+
+.cl-simple {
+    color: #4d0101 !important;
+}
+
+
+@media (max-width: 766px) {
+    .clr {
+        color: white !important;
+        font-size: 20px !important;
+        font-weight: 500 !important;
+    }
+}
+
+
+

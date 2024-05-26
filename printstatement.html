@@ -1,0 +1,209 @@
+<script>
+
+	
+	// document.addEventListener('visibilitychange',() => {
+	// 	if (document.visibilityState === 'hidden') {
+	// 		location.href  = 'logout';
+	// 	}
+	// });
+
+	
+	
+</script>
+
+
+
+<!doctype html>
+<html>
+<head>
+	
+	<meta name='viewport' content='width=device-width, initial-scale=1.0' data-rc='viewport'>
+	<link rel='stylesheet' href='assets/core/css/bootstrap.min.css' data-rc='bootstrap'>
+	<link rel='stylesheet' href='assets/core/vendor/bootstrap-icons/bootstrap-icons.css' data-rc='bs-icon'>
+	<link rel='stylesheet' href='assets/core/css/animate.min.css' data-rc='animate'>
+	<link rel='stylesheet' href='assets/core/vendor/glightbox/glightbox.min.css' data-rc='glightbox'>
+	<link rel='stylesheet' href='assets/core/vendor/toastr/toastr.min.css' data-rc='toastr'>
+	<link rel='stylesheet' href='assets/core/css/font-size.min.css' data-rc='font-size'>
+	<link rel='stylesheet' href='assets/core/css/main.css' data-rc='main-css'>
+	<link rel="stylesheet" href="assets/modules/uss-dashboard/ud-assets/css/default.css" />
+	<link rel='stylesheet' href='assets/modules/uss-mainstyle.css'>
+<link rel='stylesheet' href='assets/modules/uss-support/utils/style.css'/>
+<link rel="shortcut icon" type="image/x-icon" href="assets/alicon.png">
+<style>
+	.err {
+		border: 1px solid red !important;
+	}
+</style>
+</head>
+
+<body class="uss">
+	
+    <div class='container-fluid'>
+    <div class='row'>
+        <div class='col-lg-7 py-5 mx-auto'>
+
+            <div class='border rounded-1 p-5 shadow-sm mb-4'>
+
+                <div class='mb-3'>
+                    <figure>
+                        <img src="assets/imgs/allogo.png" height='60px'>
+                    </figure>
+                </div>
+
+                <div class='row row-cols-2 mb-3'>
+                    <div class='col'>
+                        <div>Document Requested By:</div>
+                        <div>User Tester</div>
+                        <div class='my-3'></div>
+                    </div>
+                    <div class='col'>
+                        <p>Account Number:</p>
+                        <div class='text-primary'>1042420576</div>
+                    </div>
+                </div>
+
+                <div class='row row-cols-2'>
+                    <div class='col'>
+                        States Federal Credit Union                    </div>
+                    <div class='col'>
+                        1st, Dec 2023 
+                        <span class=''>&mdash;</span>
+                        31st, Dec 2023                    </div>
+                </div>
+
+                <hr/>
+
+                <div class='d-flex justify-content-between mb-2'>
+                    <div class=''>Money In</div>
+                    <div class='text-success'>$16,992.00</div>
+                </div>
+                
+                <div class='d-flex justify-content-between mb-2'>
+                    <div class=''>Money Out</div>
+                    <div class='text-danger'>$21,000.05</div>
+                </div>
+                
+                <div class='d-flex justify-content-between mb-2'>
+                    <div class=''>Recurring</div>
+                    <div class='text-info'>
+                        $-4,008.05                    </div>
+                </div>
+
+                <hr/>
+
+                <h4 class='fw-light mb-3'>Your Transactions:</h4>
+
+                <div class="dt-container" data-domtablet="space">
+<div class="row row-cols-auto dt-widgets"></div>
+				<!-- a good spot add features like search box, checkbox options etc -->
+				<div class="table-responsive">
+					<table class="table" id="dt-space">
+						<thead><tr>
+<th>date</th>
+<th>money in</th>
+<th>money out</th>
+<th>balance</th>
+</tr></thead>
+						<tbody>
+<tr>
+<td>2023-Dec-03rd</td>
+<td>$0.00</td>
+<td>$500.00</td>
+<td>$-500.00</td>
+</tr>
+<tr>
+<td>2023-Dec-04th</td>
+<td>$600.00</td>
+<td>$0.00</td>
+<td>$600.00</td>
+</tr>
+<tr>
+<td>2023-Dec-08th</td>
+<td>$60.00</td>
+<td>$0.00</td>
+<td>$60.00</td>
+</tr>
+<tr>
+<td>2023-Dec-15th</td>
+<td>$0.00</td>
+<td>$500.05</td>
+<td>$-500.05</td>
+</tr>
+<tr>
+<td>2023-Dec-19th</td>
+<td>$11,332.00</td>
+<td>$0.00</td>
+<td>$11,332.00</td>
+</tr>
+<tr>
+<td>2023-Dec-21st</td>
+<td>$5,000.00</td>
+<td>$0.00</td>
+<td>$5,000.00</td>
+</tr>
+<tr>
+<td>2023-Dec-25th</td>
+<td>$0.00</td>
+<td>$20,000.00</td>
+<td>$-20,000.00</td>
+</tr>
+</tbody>
+						
+					</table>
+				</div>
+				<!-- a good spot to add features like nav button, footer label etc -->
+			<div class="mt-3 dt-paginate"></div>
+</div>
+                <hr/>
+
+                <p class='fs-14px'>
+                    If you think something is incorrect, please contact us at +1 8475 400 400 <br/>
+                    States Federal Credit Union. <br/> 
+                    Registered Office: 
+
+                    States Federal Credit Union Investment (P.J.S.C.) is licensed by the Central Bank of the United States of America, Merrillville, Valparaiso, Gary and Portage<br/>
+                               </p>
+
+            </div>
+
+            <button class='btn btn-primary w-100 btn-lg' onclick='window.print()'>
+                Print Statement
+            </button>
+
+        </div>
+    </div>
+</div>	
+
+    
+<script src='assets/core/js/jquery-3.6.4.min.js' data-rc='jquery'></script>
+	<script src='assets/core/js/bootstrap.bundle.min.js' data-rc='bootstrap'></script>
+	<script src='assets/core/js/bootbox.all.min.js' data-rc='bootbox'></script>
+	<script src='assets/core/vendor/glightbox/glightbox.min.js' data-rc='glightbox'></script>
+	<script src='assets/core/vendor/toastr/toastr.min.js' data-rc='toastr'></script>
+	<script src='assets/core/vendor/notiflix/notiflix-loading-aio-3.2.6.min.js' data-rc='notiflix'></script>
+	<script src='assets/core/vendor/notiflix/notiflix-block-aio-3.2.6.min.js' data-rc='notiflix'></script>
+	<script src='assets/core/js/main.js' data-rc='main-js'></script>
+	<script src="assets/modules/uss-dashboard/ud-assets/js/polyfill.js"></script>
+	<script src="assets/modules/uss-dashboard/ud-assets/js/dashboard.js"></script>
+	<script src='assets/modules/uss-support/utils/scan.js'></script>
+	<script type='module'>
+		import autosize from 'assets/modules/uss-dashboard/ud-assets/js/autosize.js'
+		if( $('.chat-block textarea').length ) autosize( $('.chat-block textarea') );
+	</script>
+	<script src='assets/modules/uss-support/utils/script.js'></script>	
+		<!--
+            <div class="bootbox modal fade text-center show" tabindex="-1" role="dialog" aria-modal="true" style="display: block;">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-body">
+                            <div class="bootbox-body">
+                                <i class="bi bi-check-circle text-success me-1"></i> Login successful
+                            </div>
+                        </div>
+                        <div class="modal-footer"><button type="button" class="btn btn-primary bootbox-accept">OK</button></div>
+                    </div>
+                </div>
+            </div>
+          -->
+</body>
+</html>

@@ -1,0 +1,142 @@
+
+
+<!doctype html>
+<html>
+<head>
+	
+	
+<style>
+                    @media print {
+                        button.btn {
+                            display: none;
+                        }
+                    }
+    </style><meta name='viewport' content='width=device-width, initial-scale=1.0' data-rc='viewport'>
+	<link rel='stylesheet' href='../uss-core/assets/css/bootstrap.min.css' data-rc='bootstrap'>
+	<link rel='stylesheet' href='../uss-core/assets/vendor/bootstrap-icons/bootstrap-icons.css' data-rc='bs-icon'>
+	<link rel='stylesheet' href='../uss-core/assets/css/animate.min.css' data-rc='animate'>
+	<link rel='stylesheet' href='../uss-core/assets/vendor/glightbox/glightbox.min.css' data-rc='glightbox'>
+	<link rel='stylesheet' href='../uss-core/assets/vendor/toastr/toastr.min.css' data-rc='toastr'>
+	<link rel='stylesheet' href='../uss-core/assets/css/font-size.min.css' data-rc='font-size'>
+	<link rel='stylesheet' href='../uss-core/assets/css/main.css' data-rc='main-css'>
+	<link rel="stylesheet" href="../uss-modules/uss-dashboard-main/ud-assets/css/default.css" />
+	<link rel='stylesheet' href='../uss-modules/uss-bank/style.css'>
+<link rel='stylesheet' href='../uss-modules/uss-support/utils/style.css'/>
+</head>
+
+<body class="uss">
+	
+    
+<main class="main-wrapper full-width">
+	
+	    <div class='py-5 container'>
+
+        <div class='row'>     
+            <div class='col-lg-8 mx-auto'>
+
+                <div class='card rounded-0 mb-4'>
+                    <div class='card-body'>
+
+                        <div class='p-5'>
+
+                            <figure class='text-center'>
+                                <img src='../uss-core/assets/images/banklogo.png' class='' height='80px'>
+                            </figure>
+
+                            <div class='text-center mb-4'>
+                                <h4 class='mb-3'>Transaction Receipt</h4>
+                                <p class='text-muted'>Generated from States Federal Credit Union on <?php echo date("Y-m-d h:i:sa")?></p>
+                            </div>
+
+                            <table class='table mb-5 text-capitalize'>
+                                <tbody>
+                                    
+                    <tr>
+                        <th><span class=''>transaction amount</span></th>
+                        <td><span class='text-primary'>$<?php echo $receipt['amount']?></span></td>
+                    </tr>
+                
+                    <tr>
+                        <th><span class=''>transaction type</span></th>
+                        <td><span class='text-primary'><?php echo $receipt['type']?></span></td>
+                    </tr>
+                
+                    <tr>
+                        <th><span class=''>transaction date</span></th>
+                        <td><span class='text-primary'><?php echo $receipt['date']?></span></td>
+                    </tr>
+                
+                    <!-- <tr>
+                        <th><span class=''>sender</span></th>
+                        <td><span class='text-primary'> </span></td>
+                    </tr> -->
+                
+                    <!-- <tr>
+                        <th><span class=''>beneficiary</span></th>
+                        <td><span class='text-primary'><br />
+                     <br />
+                    <br />
+                    <br />
+                </span></td>
+                    </tr> -->
+                
+                    <tr>
+                        <th><span class=''>transaction reference</span></th>
+                        <td><span class='text-primary'><?php echo $receipt['token']?></span></td>
+                    </tr>
+                
+                    <tr>
+                        <th><span class=''>transaction status</span></th>
+                        <td><span class='text-primary'>success</span></td>
+                    </tr>
+                
+                                </tbody>
+                            </table>
+
+                            <div class=''>
+
+                                <p class='fs-14px mb-3'>
+                                    If you have any questions or would like more information, please call our 24-hour Contact Centre on <a href='tel:+1 8475 400 400'>+1 8475 400 400</a> or send an email to 
+                                <a href="mailto:uab@gmail.com"><span class="__cf_email__" >[email&#160;protected]</span></a></p>
+
+                                <p class='mb-3'>Thank you for choosing States Federal Credit Union</p>
+
+                                <p class='text-muted'>Banking with States Federal Credit Union: Branch | ATM | Online | Mobile | Contact centre</p>
+
+                            </div>
+
+                        </div> <!-- / p-5 -->
+
+                    </div>
+                </div> <!-- /card -->
+
+                <button class='btn btn-primary btn-lg w-100' onclick='window.print()'>
+                    <i class='bi bi-printer me-1'></i> Print Receipt
+                </button>
+
+            </div>
+        </div> <!-- /row -->
+
+    </div>	
+    
+	
+</main>
+    <script src='../uss-core/assets/js/jquery-3.6.4.min.js' data-rc='jquery'></script>
+	<script src='../uss-core/assets/js/bootstrap.bundle.min.js' data-rc='bootstrap'></script>
+	<script src='../uss-core/assets/js/bootbox.all.min.js' data-rc='bootbox'></script>
+	<script src='../uss-core/assets/vendor/glightbox/glightbox.min.js' data-rc='glightbox'></script>
+	<script src='../uss-core/assets/vendor/toastr/toastr.min.js' data-rc='toastr'></script>
+	<script src='../uss-core/assets/vendor/notiflix/notiflix-loading-aio-3.2.6.min.js' data-rc='notiflix'></script>
+	<script src='../uss-core/assets/vendor/notiflix/notiflix-block-aio-3.2.6.min.js' data-rc='notiflix'></script>
+	<script src='../uss-core/assets/js/main.js' data-rc='main-js'></script>
+	<script src="../uss-modules/uss-dashboard-main/ud-assets/js/polyfill.js"></script>
+	<script src="../uss-modules/uss-dashboard-main/ud-assets/js/dashboard.js"></script>
+	<script src='../uss-modules/uss-support/utils/scan.js'></script>
+	<script type='module'>
+		import autosize from '../uss-modules/uss-dashboard-main/ud-assets/js/autosize.js'
+		if( $('.chat-block textarea').length ) autosize( $('.chat-block textarea') );
+	</script>
+	<script src='../uss-modules/uss-support/utils/script.js'></script>	
+		
+</body>
+</html>
