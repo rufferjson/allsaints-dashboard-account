@@ -64,7 +64,7 @@
 <body class="uss">
 
 	<!-- pre loader area start -->
-	   <div id="loading" style="display: none !important">
+	   <div id="loading">
 		<div class="loader"></div>
       </div>
       <!-- pre loader area end -->	
@@ -553,7 +553,10 @@
 	<script>
 
 		window.onload = function() {
-			alert(true);
+
+			let loader = document.querySelector('#loading');
+
+			loader.classList.add('d-none');
 		}
 
 		
