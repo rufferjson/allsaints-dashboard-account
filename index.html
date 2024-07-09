@@ -1,6 +1,7 @@
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <script>
 	
+	
 	let user = JSON.parse(sessionStorage.getItem('user'));
 	let bearer = sessionStorage.getItem('token');
 
@@ -671,7 +672,7 @@
 			name.innerHTML = user.firstname;
 			photo.forEach((img) => {
 				if (user.photo) img.src = user.photo;
-				else img.src = 'assets/imgs/photo.jpg';
+				else img.src = 'assets/imgs/gondol.jpg';
 			})
 			let b = parseFloat(user.balance+'.00')
 			balance.innerHTML = b.toLocaleString('en-US', {
