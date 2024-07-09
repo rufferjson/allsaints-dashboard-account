@@ -903,7 +903,20 @@
 
 
 
-            toastr.success('transfer sucessfully!');
+            toastr.error('transction failed!');
+            
+            Swal.fire({
+               icon: "error",
+               title: "Transaction Failed",
+               text: "Contact our customer care service!",
+            });
+
+            
+
+
+
+
+
         }
     });
 
